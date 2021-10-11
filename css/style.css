@@ -151,14 +151,7 @@ input::placeholder {
   width: 60%;
   padding: 0.6rem;
   border: 1px solid #d6e9c6;
-}
-
-.error {
-  color: red;
-}
-
-.success {
-  color: green;
+  transition: all 0.5s;
 }
 
 @media screen and (max-width: 768px) {

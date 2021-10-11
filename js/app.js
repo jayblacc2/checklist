@@ -39,6 +39,9 @@ function msg(message) {
   // append the dom where it will be displayed
   const container = document.querySelector('.container');
   form.before(div);
+  setTimeout(() => {
+    div.remove();
+  }, 2000);
 }
 
 function addTodo(e) {
@@ -66,6 +69,7 @@ function deleteItem(e) {
     this.remove();
     console.log(e.target);
     todoCounts();
+    msg('Todo deleted');
   }
 }
 
