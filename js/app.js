@@ -33,12 +33,12 @@ function todoCounts() {
 function msg(message) {
   const div = document.createElement('div');
 
-  div.className = 'error';
+  div.className += 'alert error';
 
   div.innerHTML = `<p>${message}</p>`;
   // append the dom where it will be displayed
   const container = document.querySelector('.container');
-  container.appendChild(div);
+  form.before(div);
 }
 
 function addTodo(e) {
@@ -49,11 +49,11 @@ function addTodo(e) {
 
     // Alert When task is addeed
 
-    // setTimeout(msg('Enter a Task!'), 1000);
+    msg('Task Added!');
   } else {
     setTimeout(function (message) {
       msg('Enter a Task!');
-    }, 1000);
+    }, 3000);
   }
 
   e.preventDefault();
