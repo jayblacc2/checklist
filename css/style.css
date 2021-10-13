@@ -69,7 +69,7 @@ h3 {
 }
 .form-group:hover {
   box-shadow: 2px 5px 5px rgba(231, 234, 231, 0.79);
-  transform: scale(1.01) translateY(-10%);
+  transform: scale(1.01) translateY(-5%);
   cursor: pointer;
 }
 .form-group:hover i {
@@ -94,7 +94,6 @@ label {
 input::placeholder {
   font-size: 1.2rem;
   color: #687980;
-  /* letter-spacing: 2px; */
   margin-left: 0.3rem;
 }
 
@@ -147,7 +146,7 @@ input::placeholder {
   background-color: #dff0d8;
   border-radius: 4px;
   color: #3c763d;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   width: 60%;
   padding: 0.6rem;
   border: 1px solid #d6e9c6;
