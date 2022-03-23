@@ -9,50 +9,48 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@500&display=swap"
       rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Checklist</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="todo-wrapper">
-        <h1>Checklist</h1>
-        <form id="form">
-          <div class="form-group">
-            <div class="input-group">
-              <label for="text">Add item</label>
-              <input
-                type="text"
-                id="text"
-                name="text"
-                class="text-input"
-                placeholder="Enter task"
-              />
-            </div>
-            <div class="icon-wrapper">
-              <a href="#"
-                ><i class="fas fa-plus-circle" title="Add todo"></i
-              ></a>
-            </div>
-          </div>
-          <div class="form-group">
-            <h3>Todos count : <span class="todo-count"> 0</span></h3>
-          </div>
-        </form>
-        <h3 class="todo-title">My Checklists</h3>
-        <ul class="todo-container"></ul>
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Checklist</title>
+      </head>
+      <body>
+        <div class="container">
+          <div class="todo-wrapper">
+            <h1>Checklist</h1>
+            <form id="form">
+              <div class="form-group">
+                <div class="input-group">
+                  <label for="text">Add item</label>
+                  <input
+                  type="text"
+                  id="text"
+                  name="text"
+                  class="text-input"
+                  placeholder="Enter task"
+                  />
+                </div>
+                <div class="icon-wrapper">
+                  <a href="#"
+                    ><i class="fas fa-plus-circle" title="Add todo"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="form-group">
+                <h3>Todos count : <span class="todo-count"> 0</span></h3>
+              </div>
+            </form>
+            <h3 class="todo-title">My Checklists</h3>
+          <ul class="todo-container"></ul>
+        </div>
+        <!--        Here the dynamic todos' are addded here -->
       </div>
-
-      <!--        Here the dynamic todos' are addded here -->
-    </div>
-
-    <script src="js/app.js"></script>
-  </body>
-</html>
+      <script src="js/app.js"></script>
+    </body>
+  </html>
