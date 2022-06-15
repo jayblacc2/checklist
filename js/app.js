@@ -8,6 +8,11 @@ form.addEventListener('submit', addTodo);
 
 // function to Create LI element
 function createTask() {
+  // const todoContainer = document.createElement('ul');
+  // todoList.classList.add('todo-container');
+
+
+
   const todoList = document.createElement('li');
   todoList.classList.add('todo-item');
 
@@ -19,6 +24,8 @@ function createTask() {
   todoContainer.appendChild(todoList);
   todoList.appendChild(circlePlus);
 
+
+
   todoList.addEventListener('click', deleteItem);
 }
 
@@ -26,14 +33,15 @@ function createTask() {
 
 function todoCounts() {
   todoCount.innerText =
-    document.querySelector('.todo-container').childNodes.length;
+      document.querySelector('.todo-container').childNodes.length;
 }
 
 // Message function
-function msg(message) {
+function msg(message, msgClass) {
   const div = document.createElement('div');
 
-  div.className += 'alert error';
+  // div.className += 'alert msgClass';
+  div.classList.add('alert', msgClass);
 
   div.innerHTML = `<p>${message}</p>`;
   // append the dom where it will be displayed
@@ -41,7 +49,7 @@ function msg(message) {
   form.before(div);
   setTimeout(() => {
     div.remove();
-  }, 2000);
+  }, 1000);
 }
 
 function addTodo(e) {
@@ -49,14 +57,17 @@ function addTodo(e) {
     createTask();
     textInput.value = '';
     todoCounts();
+    todoContainer.style.opacity = 1;
 
-    // Alert When task is addeed
+    // Alert When task is added
+    msg('Task Added! 😊', 'success');
 
-    msg('Task Added!');
   } else {
-    setTimeout(function (message) {
-      msg('Enter a Task!');
-    }, 3000);
+    // setTimeout(function (message) {
+    //   msg('Enter a Task 😞!', 'error');
+    // }, 2000);
+
+    msg('Enter a Task 😞!', 'error');
   }
 
   e.preventDefault();
@@ -67,9 +78,8 @@ function addTodo(e) {
 function deleteItem(e) {
   if (e.target.tagName === 'A') {
     this.remove();
-    console.log(e.target);
     todoCounts();
-    msg('Todo deleted');
+    msg('Todo deleted', 'error');
   }
 }
 
