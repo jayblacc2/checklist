@@ -31,12 +31,7 @@ body {
 .todo-wrapper {
     width: 60%;
     position: absolute;
-    /* top: 50%; */
-    /* display: flex; */
-    /* flex-flow: column; */
-    /* justify-content: center; */
     left: 50%;
-    /* margin: 0 auto; */
     transform: translate(-28%, 30%);
   }
 
@@ -138,14 +133,7 @@ input::placeholder {
   cursor: pointer;
 }
 
-/*.msg {*/
-/*  border: 1px solid #333;*/
-/*  padding: 10px 20px;*/
-/*  margin: 10px auto;*/
-/*  text-align: center;*/
-/*  width: 50rem;*/
-/*  height: 7rem;*/
-/*}*/
+
 
 .alert {
   background-color: #ffffff;
