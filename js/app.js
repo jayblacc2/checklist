@@ -11,8 +11,6 @@ function createTask() {
   // const todoContainer = document.createElement('ul');
   // todoList.classList.add('todo-container');
 
-
-
   const todoList = document.createElement('li');
   todoList.classList.add('todo-item');
 
@@ -24,8 +22,6 @@ function createTask() {
   todoContainer.appendChild(todoList);
   todoList.appendChild(circlePlus);
 
-
-
   todoList.addEventListener('click', deleteItem);
 }
 
@@ -33,20 +29,21 @@ function createTask() {
 
 function todoCounts() {
   todoCount.innerText =
-      document.querySelector('.todo-container').childNodes.length;
+    document.querySelector('.todo-container').childNodes.length;
 }
 
 // Message function
 function msg(message, msgClass) {
   const div = document.createElement('div');
 
-  // div.className += 'alert msgClass';
+  div.className = 'msg';
+
   div.classList.add('alert', msgClass);
 
-  div.innerHTML = `<p>${message}</p>`;
+  div.innerHTML = `<p class="msg">${message}</p>`;
   // append the dom where it will be displayed
   const container = document.querySelector('.container');
-  form.before(div);
+  form.after(div);
   setTimeout(() => {
     div.remove();
   }, 1000);
@@ -61,12 +58,7 @@ function addTodo(e) {
 
     // Alert When task is added
     msg('Task Added! 😊', 'success');
-
   } else {
-    // setTimeout(function (message) {
-    //   msg('Enter a Task 😞!', 'error');
-    // }, 2000);
-
     msg('Enter a Task 😞!', 'error');
   }
 
@@ -82,10 +74,3 @@ function deleteItem(e) {
     msg('Todo deleted', 'error');
   }
 }
-
-// todoContainer.addEventListener('click', function deleteItem(e) {
-//   if (e.target.className === 'todo-item') {
-//     e.target.remove();
-//     console.log(e.target);
-//   }
-// });

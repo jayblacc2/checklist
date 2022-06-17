@@ -1,56 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@500&display=swap"
-      rel="stylesheet"
-      />
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-        />
-        <link rel="stylesheet" href="css/style.css" />
-        <title>Checklist</title>
-      </head>
-      <body>
-        <div class="container">
-          <div class="todo-wrapper">
-            <h1>Checklist</h1>
-            <form id="form">
-              <div class="form-group">
-                <div class="input-group">
-                  <label for="text">Add item</label>
-                  <input
-                  type="text"
-                  id="text"
-                  name="text"
-                  class="text-input"
-                  placeholder="Enter task"
-                  />
-                </div>
-                <div class="icon-wrapper">
-                  <a href="#"
-                    ><i class="fas fa-plus-circle" title="Add todo"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="form-group">
-                <h3>Todos count : <span class="todo-count"> 0</span></h3>
-              </div>
-            </form>
-            <h3 class="todo-title">My Checklists</h3>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Checklist</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="todo-wrapper">
+      <h1>Checklist</h1>
+      <form id="form" class="form">
+        <div class="form-group">
+          <div class="input-group">
+            <label for="text">Add Task</label>
+            <input type="text" id="text" name="text" class="text-input" placeholder="Enter task" />
+            <a class="icon-link" href="#"><i class="fas fa-plus-circle" title="Add todo"></i></a>
+          </div>
+        </div>
+        <div class="form-group">
+          <h3>Todos count : <span class="todo-count"> 0</span></h3>
+        </div>
+        <div class="todo">
+          <h3 class="todo-title">My Checklists</h3>
           <ul class="todo-container"></ul>
         </div>
-        <!--        Here the dynamic todos' are addded here -->
-      </div>
-      <script src="js/app.js"></script>
-    </body>
-  </html>
+      </form>
+    </div>
+    <!--        Here the dynamic todos' are added here -->
+  </div>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
