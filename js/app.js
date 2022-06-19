@@ -74,3 +74,14 @@ function deleteItem(e) {
     msg('Todo deleted', 'error');
   }
 }
+
+function updateLocalStorage(item) {
+  //setItem()
+  localStorage.setItem();
+  //getItem
+  localStorage.getItem();
+  //delete item
+  localStorage.removeItem();
+  //clear items
+  localStorage.clear();
+}
