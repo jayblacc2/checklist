@@ -8,9 +8,6 @@ form.addEventListener('submit', addTodo);
 
 // function to Create LI element
 function createTask() {
-  // const todoContainer = document.createElement('ul');
-  // todoList.classList.add('todo-container');
-
   const todoList = document.createElement('li');
   todoList.classList.add('todo-item');
 
@@ -54,7 +51,6 @@ function addTodo(e) {
     createTask();
     textInput.value = '';
     todoCounts();
-    todoContainer.style.opacity = 1;
 
     // Alert When task is added
     msg('Task Added! 😊', 'success');
