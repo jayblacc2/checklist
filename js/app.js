@@ -47,10 +47,12 @@ function msg(message, msgClass) {
 }
 
 function addTodo(e) {
-  if (textInput.value !== '') {
+  let input = textInput.value;
+  if (input !== '') {
     createTask();
     textInput.value = '';
     todoCounts();
+    saveToLocalStorage(input);
 
     // Alert When task is added
     msg('Task Added! 😊', 'success');
@@ -71,13 +73,14 @@ function deleteItem(e) {
   }
 }
 
-function updateLocalStorage(item) {
-  //setItem()
-  localStorage.setItem();
-  //getItem
-  localStorage.getItem();
-  //delete item
-  localStorage.removeItem();
-  //clear items
-  localStorage.clear();
+//save item to storage
+function saveToLocalStorage(input) {
+  let items;
+  if (localStorage.getItem('items') === null) {
+    items = [];
+  } else {
+    items = JSON.parse(localStorage.getItem('items'));
+  }
+  items.push(input);
+  localStorage.setItem('items', JSON.stringify(items));
 }
