@@ -109,6 +109,9 @@ input::placeholder {
   color: #687980;
   margin-left: 0.3rem;
 }
+.btn-del {
+  margin-left: 15rem;
+}
 
 .icon-link,
 .far {
