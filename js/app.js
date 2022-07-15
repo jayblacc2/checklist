@@ -84,3 +84,5 @@ function saveToLocalStorage(input) {
   items.push(input);
   localStorage.setItem('items', JSON.stringify(items));
 }
+
+function removeItemFromStorage(item) {}
