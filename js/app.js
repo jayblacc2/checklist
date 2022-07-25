@@ -18,7 +18,7 @@ function createTask() {
   const circlePlus = document.createElement('a');
   circlePlus.className = 'far fa-trash-alt';
 
-  // addCheckbox(todoList[0]);
+  addCheckbox(todoList.childNodes[0]);
   todoContainer.appendChild(todoList);
   todoList.appendChild(circlePlus);
 
@@ -105,13 +105,14 @@ function getCurrentDate(element) {
 }
 getCurrentDate(heading);
 
-function addCheckbox(parentElement) {
+function addCheckbox(element) {
   const check = document.createElement('input');
-
-  check.setAttribute('type', 'checkbox');
-  check.setAttribute('class', 'bg');
-  console.log(check);
-
-  // parentElement.appendChild(check);
-  parentElement.before(check);
+  setAttr(check, {type: 'checkbox', class: 'bg'});
+  element.before(check);
+}
+// set element Attribute
+function setAttr(el, attributes) {
+  for (let key in attributes) {
+    el.setAttribute(key, attributes[key]);
+  }
 }
