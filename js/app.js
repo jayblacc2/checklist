@@ -2,6 +2,7 @@ const form = document.querySelector('form');
 const textInput = document.querySelector('.text-input');
 const todoCount = document.querySelector('.todo-count');
 const todoContainer = document.querySelector('.todo-container');
+const heading = document.querySelector('h1');
 
 // Add EventListener
 form.addEventListener('submit', addTodo);
@@ -9,6 +10,7 @@ form.addEventListener('submit', addTodo);
 // function to Create LI element
 function createTask() {
   const todoList = document.createElement('li');
+
   todoList.classList.add('todo-item');
 
   todoList.textContent = textInput.value;
@@ -16,6 +18,7 @@ function createTask() {
   const circlePlus = document.createElement('a');
   circlePlus.className = 'far fa-trash-alt';
 
+  // addCheckbox(todoList[0]);
   todoContainer.appendChild(todoList);
   todoList.appendChild(circlePlus);
 
@@ -86,3 +89,29 @@ function saveToLocalStorage(input) {
 }
 
 function removeItemFromStorage(item) {}
+
+// date function
+
+function getCurrentDate(element) {
+  const date = new Date();
+  const option = {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+  };
+  const currentDay = date.toLocaleString('US-en', option);
+
+  heading.textContent = currentDay;
+}
+getCurrentDate(heading);
+
+function addCheckbox(parentElement) {
+  const check = document.createElement('input');
+
+  check.setAttribute('type', 'checkbox');
+  check.setAttribute('class', 'bg');
+  console.log(check);
+
+  // parentElement.appendChild(check);
+  parentElement.before(check);
+}
