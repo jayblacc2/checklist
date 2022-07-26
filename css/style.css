@@ -51,11 +51,8 @@ li {
 h1 {
   font-size: 2rem;
   letter-spacing: 2px;
-
   text-transform: capitalize;
   color: #515e63;
-  background-color: #d7dcd7c9;
-
   border-radius: 5px;
 }
 .form {

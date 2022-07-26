@@ -116,3 +116,7 @@ function setAttr(el, attributes) {
     el.setAttribute(key, attributes[key]);
   }
 }
+
+function check() {
+  document.getElementById('myCheck').checked = false;
+}
